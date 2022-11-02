@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spotifyuiredesign/constants/colors.dart';
 import 'package:spotifyuiredesign/constants/default_button.dart';
 
 class DowmTextPart extends StatelessWidget {

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:spotifyuiredesign/ChossMode/choses_mode.dart';
+import 'package:spotifyuiredesign/constants/colors.dart';
+
+import 'Welcome/welcome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,20 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Spotify App',
       theme: ThemeData(),
-      home: const WelcomePage(),
-    );
-  }
-}
-
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Image.asset('assets/images/Vector (1).png'),
-      ),
+      home: const ChooseModeView(),
     );
   }
 }

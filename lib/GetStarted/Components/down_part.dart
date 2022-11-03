@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotifyuiredesign/constants/default_button.dart';
+import 'package:spotifyuiredesign/constants/routes.dart';
 
 class DowmTextPart extends StatelessWidget {
   const DowmTextPart({
@@ -39,7 +40,11 @@ class DowmTextPart extends StatelessWidget {
             ),
           ),
           DefaultButton(
-            onPress: () {},
+            onPress: () {
+              Navigator.of(context).pushNamed(
+                chooseModeRoute,
+              );
+            },
             text: 'Get Started',
           ),
         ],

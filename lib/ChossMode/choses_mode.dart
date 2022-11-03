@@ -4,6 +4,7 @@ import 'package:spotifyuiredesign/ChossMode/Compenents/switch_mode.dart';
 import 'package:spotifyuiredesign/GetStarted/Components/back_image.dart';
 import 'package:spotifyuiredesign/GetStarted/Components/color_cont.dart';
 import 'package:spotifyuiredesign/constants/default_button.dart';
+import 'package:spotifyuiredesign/constants/routes.dart';
 
 class ChooseModeView extends StatelessWidget {
   const ChooseModeView({Key? key}) : super(key: key);
@@ -32,7 +33,11 @@ class ChooseModeView extends StatelessWidget {
                 const SwitchMode(),
                 DefaultButton(
                   text: 'Continue',
-                  onPress: () {},
+                  onPress: () {
+                    Navigator.of(context).pushNamed(
+                      registerSignInViewRoute,
+                    );
+                  },
                 ),
               ],
             ),

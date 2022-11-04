@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotifyuiredesign/ChossMode/choses_mode.dart';
 import 'package:spotifyuiredesign/GetStarted/get_started.dart';
+import 'package:spotifyuiredesign/HomePage/home_page.dart';
 import 'package:spotifyuiredesign/Register/register.dart';
 import 'package:spotifyuiredesign/Register/register_sign_in.dart';
 import 'package:spotifyuiredesign/SignIn/sing_in.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         getStartedRoute: (context) => const GetStartedPage(),
         chooseModeRoute: (context) => const ChooseModeView(),
         registerSignInViewRoute: (context) => const RegisteSignInView(),
+        homePageRoute: (context) => const HomePageView(),
       },
     );
   }

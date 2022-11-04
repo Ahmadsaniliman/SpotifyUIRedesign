@@ -13,7 +13,11 @@ class DowPart extends StatelessWidget {
       children: [
         DefaultButton(
           text: 'Sign In',
-          onPress: () {},
+          onPress: () {
+            Navigator.of(context).pushNamed(
+              homePageRoute,
+            );
+          },
         ),
         Padding(
           padding: const EdgeInsets.symmetric(

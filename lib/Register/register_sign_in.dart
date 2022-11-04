@@ -20,7 +20,8 @@ class _RegisteSignInViewState extends State<RegisteSignInView> {
             left: 0,
             bottom: 0,
             child: Image.asset(
-              'assets/images/Rectangle 9.png',
+              'assets/images/bottomimage.png',
+              width: 300,
             ),
           ),
           SafeArea(

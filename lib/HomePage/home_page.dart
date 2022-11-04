@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:spotifyuiredesign/HomePage/Components/build_app_cont.dart';
+import 'package:spotifyuiredesign/HomePage/Components/category_card.dart';
+import 'package:spotifyuiredesign/HomePage/Components/music_card.dart';
 import 'package:spotifyuiredesign/constants/colors.dart';
+import 'package:spotifyuiredesign/constants/demo_data.dart';
 
-class HomePageView extends StatelessWidget {
+class HomePageView extends StatefulWidget {
   const HomePageView({Key? key}) : super(key: key);
 
+  @override
+  State<HomePageView> createState() => _HomePageViewState();
+}
+
+class _HomePageViewState extends State<HomePageView> {
+  int selectedOne = 0;
   @override
   Widget build(BuildContext context) {
     final List<String> musicCategories = [
@@ -13,7 +22,6 @@ class HomePageView extends StatelessWidget {
       'Artist',
       'PodCasts',
     ];
-    final int index = 0;
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -23,6 +31,7 @@ class HomePageView extends StatelessWidget {
             left: 20.0,
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const AppBarContainer(),
               SizedBox(
@@ -31,31 +40,47 @@ class HomePageView extends StatelessWidget {
                   itemCount: musicCategories.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => GestureDetector(
-                    onTap: () {},
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      // mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(
-                            right: 35.0,
-                          ),
-                          child: Text(
-                            musicCategories[index],
-                            style: const TextStyle(
-                              fontSize: 20.0,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          height: 5.0,
-                          width: 35.0,
-                          color: primaryColor,
-                        ),
-                      ],
+                    onTap: () {
+                      setState(() {
+                        selectedOne = index;
+                      });
+                    },
+                    child: CategoryCard(
+                      musicCategories: musicCategories,
+                      selectedOne: selectedOne,
+                      index: index,
                     ),
                   ),
                 ),
+              ),
+              const SizedBox(height: 15.0),
+              SizedBox(
+                height: 250,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: demoMusic.length,
+                  itemBuilder: (context, index) => MusicCard(
+                    index: index,
+                  ),
+                ),
+              ),
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text(
+                        'Playlist',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15.0),
+                      ),
+                      Text(
+                        'See All',
+                        style: TextStyle(fontSize: 10.0),
+                      )
+                    ],
+                  ),
+                ],
               ),
             ],
           ),

@@ -10,7 +10,7 @@ class WholeCont extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 210.0,
+      height: 206.0,
       width: double.infinity,
       child: Column(
         children: const [

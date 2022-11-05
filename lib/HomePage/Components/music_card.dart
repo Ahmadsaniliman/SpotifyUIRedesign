@@ -22,8 +22,8 @@ class MusicCard extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(
-              top: 7.0,
-              bottom: 7.0,
+              top: 5.0,
+              bottom: 5.0,
             ),
             child: Text(
               demoMusic[index].songName,

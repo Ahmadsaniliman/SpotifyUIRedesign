@@ -23,6 +23,21 @@ class _HomePageViewState extends State<HomePageView> {
       'PodCasts',
     ];
     return Scaffold(
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        height: 50.0,
+        width: double.infinity,
+        color: dartModeColor,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: const [
+            Icon(Icons.ac_unit, color: Colors.white),
+            Icon(Icons.ac_unit, color: Colors.white),
+            Icon(Icons.ac_unit, color: Colors.white),
+            Icon(Icons.ac_unit, color: Colors.white),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(
@@ -35,7 +50,7 @@ class _HomePageViewState extends State<HomePageView> {
             children: [
               const AppBarContainer(),
               SizedBox(
-                height: 40.0,
+                height: 35.0,
                 child: ListView.builder(
                   itemCount: musicCategories.length,
                   scrollDirection: Axis.horizontal,
@@ -53,9 +68,9 @@ class _HomePageViewState extends State<HomePageView> {
                   ),
                 ),
               ),
-              const SizedBox(height: 15.0),
+              const SizedBox(height: 10.0),
               SizedBox(
-                height: 250,
+                height: 240,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: demoMusic.length,
@@ -64,21 +79,72 @@ class _HomePageViewState extends State<HomePageView> {
                   ),
                 ),
               ),
+              const SizedBox(height: 10.0),
               Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        'Playlist',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 15.0),
+                  const PlayListRow(),
+                  const SizedBox(height: 10.0),
+                  SizedBox(
+                    height: 100.0,
+                    child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      itemCount: 4,
+                      itemBuilder: (context, index) => Container(
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 10.0,
+                          horizontal: 5.0,
+                        ),
+                        margin: const EdgeInsets.only(bottom: 5.0),
+                        height: 60.0,
+                        width: double.infinity,
+                        color: Colors.green,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  height: 30.0,
+                                  width: 30.0,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                    color: dartModeColor,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 25.0,
+                                ),
+                                Column(
+                                  children: const [
+                                    Text('As It Was'),
+                                    Text(
+                                      'Harry Style',
+                                      style: TextStyle(fontSize: 10.0),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                const Text('3:50'),
+                                const SizedBox(
+                                  width: 25.0,
+                                ),
+                                Container(
+                                  height: 30.0,
+                                  width: 30.0,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                    color: dartModeColor,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                      Text(
-                        'See All',
-                        style: TextStyle(fontSize: 10.0),
-                      )
-                    ],
+                    ),
                   ),
                 ],
               ),
@@ -86,6 +152,29 @@ class _HomePageViewState extends State<HomePageView> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class PlayListRow extends StatelessWidget {
+  const PlayListRow({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: const [
+        Text(
+          'Playlist',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
+        ),
+        Text(
+          'See All',
+          style: TextStyle(fontSize: 10.0),
+        )
+      ],
     );
   }
 }

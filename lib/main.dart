@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotifyuiredesign/ArtistPage/artist.dart';
 import 'package:spotifyuiredesign/ChossMode/choses_mode.dart';
 import 'package:spotifyuiredesign/GetStarted/get_started.dart';
 import 'package:spotifyuiredesign/HomePage/home_page.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Spotify App',
       theme: ThemeData(),
-      home: const WelcomePage(),
+      home: const ArtistPageView(),
       routes: {
         registerViewRoute: (context) => const RegisterView(),
         signInViewRoute: (context) => const SignInView(),

@@ -96,7 +96,7 @@ class MusicDetailsPageView extends StatelessWidget {
                               Text(music.artistName),
                             ],
                           ),
-                          const Icon(Icons.ac_unit),
+                          Image.asset('assets/icons/farvourite.png'),
                         ],
                       ),
                     ),
@@ -145,20 +145,30 @@ class MusicDetailsPageView extends StatelessWidget {
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Icon(Icons.ac_unit),
-                              Icon(Icons.ac_unit),
-                              Icon(Icons.ac_unit),
-                              Icon(Icons.ac_unit),
-                              Icon(Icons.ac_unit),
+                            children: [
+                              Image.asset('assets/icons/repeat.png'),
+                              Image.asset('assets/icons/backwardplay.png'),
+                              Container(
+                                width: 50.0,
+                                height: 60.0,
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                    'assets/icons/backwardplay.png'),
+                              ),
+                              Image.asset('assets/icons/forwardplay.png'),
+                              Image.asset('assets/icons/shuffle.png'),
                             ],
                           ),
                         ),
                         Column(
                           children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: const Icon(Icons.arrow_upward),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Image.asset(
+                                'assets/icons/arrowup.png',
+                              ),
                             ),
                             const Text('Lyrics'),
                           ],

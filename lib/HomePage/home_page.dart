@@ -5,7 +5,6 @@ import 'package:spotifyuiredesign/HomePage/Components/music_card.dart';
 import 'package:spotifyuiredesign/MusicPage/musix_page.dart';
 import 'package:spotifyuiredesign/constants/colors.dart';
 import 'package:spotifyuiredesign/constants/demo_data.dart';
-import 'package:spotifyuiredesign/constants/routes.dart';
 
 class HomePageView extends StatefulWidget {
   const HomePageView({Key? key}) : super(key: key);
@@ -25,21 +24,7 @@ class _HomePageViewState extends State<HomePageView> {
       'PodCasts',
     ];
     return Scaffold(
-      bottomNavigationBar: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        height: 50.0,
-        width: double.infinity,
-        color: dartModeColor,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            Icon(Icons.ac_unit, color: Colors.white),
-            Icon(Icons.ac_unit, color: Colors.white),
-            Icon(Icons.ac_unit, color: Colors.white),
-            Icon(Icons.ac_unit, color: Colors.white),
-          ],
-        ),
-      ),
+      bottomNavigationBar: const BottomNavContainer(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(
@@ -110,7 +95,7 @@ class _HomePageViewState extends State<HomePageView> {
                         margin: const EdgeInsets.only(bottom: 5.0),
                         height: 60.0,
                         width: double.infinity,
-                        color: Colors.green,
+                        // color: Colors.green,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -122,6 +107,9 @@ class _HomePageViewState extends State<HomePageView> {
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15.0),
                                     color: dartModeColor,
+                                  ),
+                                  child: Image.asset(
+                                    'assets/icons/play.png',
                                   ),
                                 ),
                                 const SizedBox(
@@ -151,6 +139,9 @@ class _HomePageViewState extends State<HomePageView> {
                                     borderRadius: BorderRadius.circular(15.0),
                                     color: dartModeColor,
                                   ),
+                                  child: Image.asset(
+                                    'assets/icons/love.png',
+                                  ),
                                 ),
                               ],
                             ),
@@ -164,6 +155,31 @@ class _HomePageViewState extends State<HomePageView> {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class BottomNavContainer extends StatelessWidget {
+  const BottomNavContainer({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      height: 50.0,
+      width: double.infinity,
+      color: dartModeColor.withOpacity(0.7),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Image.asset('assets/icons/home.png'),
+          Image.asset('assets/icons/nothing.png'),
+          Image.asset('assets/icons/farvourite.png'),
+          Image.asset('assets/icons/profile.png'),
+        ],
       ),
     );
   }

@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:spotifyuiredesign/HomePage/Components/build_app_cont.dart';
 import 'package:spotifyuiredesign/HomePage/Components/category_card.dart';
 import 'package:spotifyuiredesign/HomePage/Components/music_card.dart';
+import 'package:spotifyuiredesign/MusicPage/musix_page.dart';
 import 'package:spotifyuiredesign/constants/colors.dart';
 import 'package:spotifyuiredesign/constants/demo_data.dart';
+import 'package:spotifyuiredesign/constants/routes.dart';
 
 class HomePageView extends StatefulWidget {
   const HomePageView({Key? key}) : super(key: key);
@@ -74,8 +76,19 @@ class _HomePageViewState extends State<HomePageView> {
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: demoMusic.length,
-                  itemBuilder: (context, index) => MusicCard(
-                    index: index,
+                  itemBuilder: (context, index) => GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => MusicDetailsPageView(
+                            music: demoMusic[index],
+                          ),
+                        ),
+                      );
+                    },
+                    child: MusicCard(
+                      index: index,
+                    ),
                   ),
                 ),
               ),

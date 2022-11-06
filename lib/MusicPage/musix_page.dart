@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:spotifyuiredesign/constants/colors.dart';
+import 'package:spotifyuiredesign/constants/demo_data.dart';
+import 'package:spotifyuiredesign/constants/routes.dart';
 
 class MusicDetailsPageView extends StatelessWidget {
-  const MusicDetailsPageView({Key? key}) : super(key: key);
+  const MusicDetailsPageView({
+    Key? key,
+    required this.music,
+  }) : super(key: key);
+  final PopularMusic music;
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +37,9 @@ class MusicDetailsPageView extends StatelessWidget {
                     ),
                     child: IconButton(
                       onPressed: () {
-                        // Navigator.of(context).pushNamed(
-                        //   registerSignInViewRoute,
-                        // );
+                        Navigator.of(context).pushNamed(
+                          homePageRoute,
+                        );
                       },
                       icon: const Icon(
                         Icons.arrow_back_ios,
@@ -41,9 +47,126 @@ class MusicDetailsPageView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text('Now Playing'),
-                  Icon(Icons.ac_unit),
+                  const Text(
+                    'Now Playing',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  const Icon(Icons.ac_unit),
                 ],
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 20.0,
+                ),
+                child: Column(
+                  children: [
+                    Container(
+                      width: 300.0,
+                      height: 300.0,
+                      decoration: BoxDecoration(
+                        //   color: Colors.green,
+                        borderRadius: BorderRadius.circular(
+                          20.0,
+                        ),
+                      ),
+                      child: Image.asset(
+                        music.image,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                music.songName,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15.0,
+                                ),
+                              ),
+                              const SizedBox(height: 5.0),
+                              Text(music.artistName),
+                            ],
+                          ),
+                          const Icon(Icons.ac_unit),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 30.0,
+                      ),
+                      child: Column(
+                        children: [
+                          Column(
+                            children: [
+                              Stack(
+                                children: [
+                                  Container(
+                                    height: 1.0,
+                                    width: double.infinity,
+                                    color: dartModeColor,
+                                  ),
+                                  Container(
+                                    height: 3.0,
+                                    width: 150.0,
+                                    color: dartModeColor,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 5.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Text('2:55'),
+                              Text('5:00'),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    // dowmPart
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 20.0,
+                            horizontal: 45.0,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Icon(Icons.ac_unit),
+                              Icon(Icons.ac_unit),
+                              Icon(Icons.ac_unit),
+                              Icon(Icons.ac_unit),
+                              Icon(Icons.ac_unit),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.arrow_upward),
+                            ),
+                            const Text('Lyrics'),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

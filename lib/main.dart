@@ -6,7 +6,6 @@ import 'package:spotifyuiredesign/HomePage/home_page.dart';
 import 'package:spotifyuiredesign/Register/register.dart';
 import 'package:spotifyuiredesign/Register/register_sign_in.dart';
 import 'package:spotifyuiredesign/SignIn/sing_in.dart';
-import 'package:spotifyuiredesign/Welcome/welcome.dart';
 import 'package:spotifyuiredesign/constants/routes.dart';
 
 void main() {

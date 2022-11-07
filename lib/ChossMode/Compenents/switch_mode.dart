@@ -25,7 +25,9 @@ class SwitchMode extends StatelessWidget {
                   borderRadius: BorderRadius.circular(35.0),
                   color: dartModeColor.withOpacity(0.7),
                 ),
-                child: const Icon(Icons.abc),
+                child: Image.asset(
+                  'assets/icons/darkmode.png',
+                ),
               ),
               const SizedBox(height: 15.0),
               const Text(
@@ -45,7 +47,9 @@ class SwitchMode extends StatelessWidget {
                   borderRadius: BorderRadius.circular(35.0),
                   color: dartModeColor.withOpacity(0.7),
                 ),
-                child: const Icon(Icons.abc),
+                child: Image.asset(
+                  'assets/icons/lightmode.png',
+                ),
               ),
               const SizedBox(height: 15.0),
               const Text(

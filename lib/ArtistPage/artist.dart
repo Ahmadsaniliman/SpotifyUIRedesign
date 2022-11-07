@@ -55,17 +55,18 @@ class ArtistPageView extends StatelessWidget {
                     )
                   ],
                 ),
+                // const SizedBox(height: 10.0),
                 SizedBox(
-                  //   height: 100.0,
+                  height: 80.0,
                   child: ListView.builder(
-                    scrollDirection: Axis.vertical,
                     itemCount: 4,
+                    scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) => Container(
                       padding: const EdgeInsets.symmetric(
                         vertical: 10.0,
                         horizontal: 5.0,
                       ),
-                      //   margin: const EdgeInsets.only(bottom: 5.0),
+                      margin: const EdgeInsets.only(bottom: 5.0),
                       height: 60.0,
                       width: double.infinity,
                       // color: Colors.green,
@@ -125,7 +126,7 @@ class ArtistPageView extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
@@ -145,14 +146,14 @@ class Albums extends StatelessWidget {
         children: const [
           AlbumsCartegory(
             image: 'assets/images/Rectangle 16.png',
-            albumname: 'Album Name',
+            albumname: 'Red',
           ),
-          SizedBox(width: 15.0),
+          SizedBox(width: 10.0),
           AlbumsCartegory(
             image: 'assets/images/Rectangle 16.png',
             albumname: 'Album Name',
           ),
-          SizedBox(width: 15.0),
+          SizedBox(width: 10.0),
           AlbumsCartegory(
             image: 'assets/images/Rectangle 18.png',
             albumname: 'Album Name',

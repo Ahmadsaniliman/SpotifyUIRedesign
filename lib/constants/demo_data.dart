@@ -12,23 +12,23 @@ class PopularMusic {
 
 final List<PopularMusic> demoMusic = [
   PopularMusic(
-    image: 'assets/images/Rectangle 9.png',
-    songName: 'Bad Guy',
-    artistName: 'Bilie Elish',
-  ),
-  PopularMusic(
-    image: 'assets/images/Rectangle 9.png',
-    songName: 'Scorpion',
-    artistName: 'Drake',
-  ),
-  PopularMusic(
-    image: 'assets/images/Rectangle 9.png',
-    songName: 'White',
-    artistName: 'Bilie Elish',
-  ),
-  PopularMusic(
-    image: 'assets/images/Rectangle 9.png',
+    image: 'assets/images/taylor.jpg',
     songName: 'Lover',
+    artistName: 'Taylor Swift',
+  ),
+  PopularMusic(
+    image: 'assets/images/taylorred.jpg',
+    songName: 'Delicate',
+    artistName: 'Taylor Swift',
+  ),
+  PopularMusic(
+    image: 'assets/images/taylorred2.jpg',
+    songName: 'Blank Space',
+    artistName: 'Taylor Swift',
+  ),
+  PopularMusic(
+    image: 'assets/images/taylor.jpg',
+    songName: 'The 1',
     artistName: 'Taylor Swift',
   ),
 ];

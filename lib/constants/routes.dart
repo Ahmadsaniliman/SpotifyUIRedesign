@@ -5,3 +5,4 @@ const getStartedRoute = '/getstarted/';
 const chooseModeRoute = '/choosemode/';
 const homePageRoute = '/homepage/';
 const musicDetailsRoute = '/musicdetails/';
+const profileRoute = '/profilepage/';

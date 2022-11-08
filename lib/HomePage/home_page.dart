@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:spotifyuiredesign/HomePage/Components/build_app_cont.dart';
 import 'package:spotifyuiredesign/HomePage/Components/category_card.dart';
 import 'package:spotifyuiredesign/HomePage/Components/music_card.dart';
+import 'package:spotifyuiredesign/HomePage/Components/playlist.dart';
 import 'package:spotifyuiredesign/MusicPage/musix_page.dart';
+import 'package:spotifyuiredesign/constants/bottom_nav.dart';
 import 'package:spotifyuiredesign/constants/colors.dart';
 import 'package:spotifyuiredesign/constants/demo_data.dart';
+import 'package:spotifyuiredesign/constants/enums.dart';
 
 class HomePageView extends StatefulWidget {
   const HomePageView({Key? key}) : super(key: key);
@@ -24,7 +27,9 @@ class _HomePageViewState extends State<HomePageView> {
       'PodCasts',
     ];
     return Scaffold(
-      bottomNavigationBar: const BottomNavContainer(),
+      bottomNavigationBar: const BottomNavContainer(
+        selectOne: bottomenums.home,
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(
@@ -156,63 +161,6 @@ class _HomePageViewState extends State<HomePageView> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class BottomNavContainer extends StatelessWidget {
-  const BottomNavContainer({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      height: 50.0,
-      width: double.infinity,
-      color: Colors.white,
-      child: Column(
-        children: [
-          Container(
-            height: 2.0,
-            width: 30.0,
-            color: Colors.green,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Image.asset('assets/images/homee.png'),
-              Image.asset('assets/icons/nothing.png'),
-              Image.asset('assets/icons/farvourite.png'),
-              Image.asset('assets/icons/profile.png'),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class PlayListRow extends StatelessWidget {
-  const PlayListRow({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: const [
-        Text(
-          'Playlist',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
-        ),
-        Text(
-          'See All',
-          style: TextStyle(fontSize: 10.0),
-        )
-      ],
     );
   }
 }

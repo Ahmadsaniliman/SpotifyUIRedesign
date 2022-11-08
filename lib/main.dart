@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         chooseModeRoute: (context) => const ChooseModeView(),
         registerSignInViewRoute: (context) => const RegisteSignInView(),
         homePageRoute: (context) => const HomePageView(),
-        // musicDetailsRoute: (context) => const MusicDetailsPageView(music: null,),
+        profileRoute: (context) => const ProfileView(),
       },
     );
   }

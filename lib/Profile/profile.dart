@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:spotifyuiredesign/HomePage/home_page.dart';
+import 'package:spotifyuiredesign/Profile/Components/b_up_part.dart';
+import 'package:spotifyuiredesign/Profile/Components/public.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({Key? key}) : super(key: key);
@@ -6,36 +9,15 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: const BottomNavContainer(),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            vertical: 20.0,
-            horizontal: 20.0,
-          ),
-          child: Column(
-            children: [
-              Container(
-                width: double.infinity,
-                height: 300.0,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(30.0),
-                    bottomRight: Radius.circular(30.0),
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    Container(
-                      height: 150.0,
-                      width: 150.0,
-                      child: Image.asset('assets/images/'),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            SizedBox(height: 10.0),
+            BuildUpPart(),
+            PublicAlbs(),
+          ],
         ),
       ),
     );

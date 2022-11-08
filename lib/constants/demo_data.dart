@@ -32,3 +32,53 @@ final List<PopularMusic> demoMusic = [
     artistName: 'Taylor Swift',
   ),
 ];
+
+class PublicMusic {
+  final String image, title, subTitle, time;
+
+  PublicMusic({
+    required this.image,
+    required this.title,
+    required this.subTitle,
+    required this.time,
+  });
+}
+
+final List<PublicMusic> publicMusic = [
+  PublicMusic(
+    image: 'assets/images/Rectangle 31.png',
+    title: 'Dont Smile At Me',
+    subTitle: 'Bille Elish',
+    time: '4:55',
+  ),
+  PublicMusic(
+    image: 'assets/images/Rectangle 32.png',
+    title: 'Lover',
+    subTitle: 'Taylor Swift',
+    time: '4:50',
+  ),
+  PublicMusic(
+    image: 'assets/images/Rectangle 33.png',
+    title: 'Super Freaky Girl',
+    subTitle: 'Nicki Minaj',
+    time: '4:33',
+  ),
+  PublicMusic(
+    image: 'assets/images/Rectangle 34.png',
+    title: 'Bad Habit',
+    subTitle: 'Steve Lucy',
+    time: '4:55',
+  ),
+  PublicMusic(
+    image: 'assets/images/Rectangle 35.png',
+    title: 'Planet Her',
+    subTitle: 'Doja Cat',
+    time: '4:55',
+  ),
+  PublicMusic(
+    image: 'assets/images/Rectangle 32.png',
+    title: 'All Too Well',
+    subTitle: 'Taylor Swift',
+    time: '4:00',
+  ),
+];

@@ -171,14 +171,23 @@ class BottomNavContainer extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       height: 50.0,
       width: double.infinity,
-      color: dartModeColor.withOpacity(0.7),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      color: Colors.white,
+      child: Column(
         children: [
-          Image.asset('assets/icons/home.png'),
-          Image.asset('assets/icons/nothing.png'),
-          Image.asset('assets/icons/farvourite.png'),
-          Image.asset('assets/icons/profile.png'),
+          Container(
+            height: 2.0,
+            width: 30.0,
+            color: Colors.green,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.asset('assets/images/homee.png'),
+              Image.asset('assets/icons/nothing.png'),
+              Image.asset('assets/icons/farvourite.png'),
+              Image.asset('assets/icons/profile.png'),
+            ],
+          ),
         ],
       ),
     );

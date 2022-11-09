@@ -12,7 +12,7 @@ class PopularMusic {
 
 final List<PopularMusic> demoMusic = [
   PopularMusic(
-    image: 'assets/images/taylor.jpg',
+    image: 'assets/images/taylorred.jpg',
     songName: 'Lover',
     artistName: 'Taylor Swift',
   ),
@@ -22,14 +22,14 @@ final List<PopularMusic> demoMusic = [
     artistName: 'Taylor Swift',
   ),
   PopularMusic(
-    image: 'assets/images/taylorred2.jpg',
+    image: 'assets/images/taylorred.jpg',
     songName: 'Blank Space',
     artistName: 'Taylor Swift',
   ),
   PopularMusic(
-    image: 'assets/images/taylor.jpg',
-    songName: 'The 1',
-    artistName: 'Taylor Swift',
+    image: 'assets/images/taylorred.jpg',
+    songName: 'Bad Guy',
+    artistName: 'Billie Ellish',
   ),
 ];
 

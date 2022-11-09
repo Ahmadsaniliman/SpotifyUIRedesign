@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spotifyuiredesign/HomePage/home_page.dart';
 import 'package:spotifyuiredesign/constants/colors.dart';
 import 'package:spotifyuiredesign/constants/enums.dart';
 import 'package:spotifyuiredesign/constants/routes.dart';
@@ -18,102 +17,106 @@ class BottomNavContainer extends StatelessWidget {
       height: 50.0,
       width: double.infinity,
       color: Colors.white,
-      child: Column(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const HomePageView(),
-                    ),
-                  );
-                },
-                child: Column(
-                  children: [
-                    Container(
-                      height: 2.0,
-                      width: 40.0,
-                      color: selectOne == bottomenums.home
-                          ? primaryColor
-                          : Colors.white,
-                    ),
-                    Image.asset(
-                      'assets/images/homee.png',
-                      color: selectOne == bottomenums.home
-                          ? primaryColor
-                          : Colors.white,
-                    )
-                  ],
+          // 1st
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamed(
+                homePageRoute,
+              );
+            },
+            child: Column(
+              children: [
+                Container(
+                  height: 2.0,
+                  width: 40.0,
+                  color: selectOne == bottomenums.home
+                      ? primaryColor
+                      : Colors.white,
                 ),
-              ),
-              GestureDetector(
-                onTap: () {},
-                child: Column(
-                  children: [
-                    Container(
-                      height: 2.0,
-                      width: 40.0,
-                      color: selectOne == bottomenums.nothing
-                          ? primaryColor
-                          : Colors.white,
-                    ),
-                    Image.asset(
-                      'assets/images/nothing.png',
-                      color: selectOne == bottomenums.nothing
-                          ? primaryColor
-                          : Colors.white,
-                    )
-                  ],
+                const SizedBox(height: 10.0),
+                Image.asset(
+                  'assets/images/homee.png',
+                  color: selectOne == bottomenums.home
+                      ? primaryColor
+                      : Colors.black,
                 ),
-              ),
-              GestureDetector(
-                onTap: () {},
-                child: Column(
-                  children: [
-                    Container(
-                      height: 2.0,
-                      width: 40.0,
-                      color: selectOne == bottomenums.farvourite
-                          ? primaryColor
-                          : Colors.white,
-                    ),
-                    Image.asset(
-                      'assets/images/farvourite.png',
-                      color: selectOne == bottomenums.farvourite
-                          ? primaryColor
-                          : Colors.white,
-                    )
-                  ],
+              ],
+            ),
+          ),
+          // 2nd
+          GestureDetector(
+            onTap: () {},
+            child: Column(
+              children: [
+                Container(
+                  height: 2.0,
+                  width: 40.0,
+                  color: selectOne == bottomenums.nothing
+                      ? primaryColor
+                      : Colors.white,
                 ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).pushNamed(
-                    profileRoute,
-                  );
-                },
-                child: Column(
-                  children: [
-                    Container(
-                      height: 2.0,
-                      width: 40.0,
-                      color: selectOne == bottomenums.profile
-                          ? primaryColor
-                          : Colors.white,
-                    ),
-                    Image.asset(
-                      'assets/images/profile.png',
-                      color: selectOne == bottomenums.profile
-                          ? primaryColor
-                          : Colors.white,
-                    ),
-                  ],
+                const SizedBox(height: 10.0),
+                Image.asset(
+                  'assets/icons/nothing.png',
+                  color: selectOne == bottomenums.nothing
+                      ? primaryColor
+                      : Colors.black,
                 ),
-              ),
-            ],
+              ],
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamed(
+                artistPageRoute,
+              );
+            },
+            child: Column(
+              children: [
+                Container(
+                  height: 2.0,
+                  width: 40.0,
+                  color: selectOne == bottomenums.farvourite
+                      ? primaryColor
+                      : Colors.white,
+                ),
+                const SizedBox(height: 10.0),
+                Image.asset(
+                  'assets/icons/farvourite.png',
+                  color: selectOne == bottomenums.farvourite
+                      ? primaryColor
+                      : Colors.black,
+                ),
+              ],
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamed(
+                profileRoute,
+              );
+            },
+            child: Column(
+              children: [
+                Container(
+                  height: 2.0,
+                  width: 40.0,
+                  color: selectOne == bottomenums.profile
+                      ? primaryColor
+                      : Colors.white,
+                ),
+                const SizedBox(height: 10.0),
+                Image.asset(
+                  'assets/icons/profile.png',
+                  color: selectOne == bottomenums.profile
+                      ? primaryColor
+                      : Colors.black,
+                ),
+              ],
+            ),
           ),
         ],
       ),

@@ -12,7 +12,7 @@ class AlbumDesc extends StatelessWidget {
       child: Column(
         children: const [
           Text(
-            'Billie Elish',
+            'Taylor Swift',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20.0,

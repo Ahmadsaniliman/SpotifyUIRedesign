@@ -6,3 +6,4 @@ const chooseModeRoute = '/choosemode/';
 const homePageRoute = '/homepage/';
 const musicDetailsRoute = '/musicdetails/';
 const profileRoute = '/profilepage/';
+const artistPageRoute = '/artistpage/';

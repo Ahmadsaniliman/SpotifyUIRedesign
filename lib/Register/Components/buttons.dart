@@ -8,13 +8,13 @@ class RegistAndSignInBUttons extends StatelessWidget {
     required this.onPress,
     required this.index,
   }) : super(key: key);
-  final selectedOne = 0;
   final String text;
   final Function()? onPress;
   final int index;
 
   @override
   Widget build(BuildContext context) {
+    int selectedOne = 0;
     return GestureDetector(
       onTap: onPress,
       child: Container(

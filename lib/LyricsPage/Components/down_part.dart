@@ -74,6 +74,17 @@ class DownPart extends StatelessWidget {
                           width: 150.0,
                           color: dartModeColor,
                         ),
+                        Positioned(
+                          top: 0,
+                          child: Container(
+                            height: 12.0,
+                            width: 13.0,
+                            decoration: const BoxDecoration(
+                              color: dartModeColor,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ],

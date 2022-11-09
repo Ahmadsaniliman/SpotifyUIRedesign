@@ -13,7 +13,7 @@ class ArtistPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: const BottomNavContainer(
-        selectOne: bottomenums.nothing,
+        selectOne: bottomenums.farvourite,
       ),
       body: Column(
         children: const [

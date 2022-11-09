@@ -48,7 +48,7 @@ class DowPart extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset('assets/images/Vector (2).png'),
+              Image.asset('assets/images/Group 26.png'),
               Image.asset('assets/images/Vector (2).png'),
             ],
           ),

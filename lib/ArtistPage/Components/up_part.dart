@@ -14,10 +14,10 @@ class UpPartArtist extends StatelessWidget {
           height: 200.0,
           width: double.infinity,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30.0),
+            borderRadius: BorderRadius.circular(50.0),
           ),
           child: Image.asset(
-            'assets/images/Rectangle 15.png',
+            'assets/images/taylorred.jpg',
             fit: BoxFit.cover,
           ),
         ),
@@ -55,7 +55,10 @@ class UpPartArtist extends StatelessWidget {
                   ),
                 ),
               ),
-              const Icon(Icons.ac_unit),
+              const Icon(
+                Icons.ac_unit,
+                color: Colors.white,
+              ),
             ],
           ),
         )

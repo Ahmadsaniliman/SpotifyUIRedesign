@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotifyuiredesign/constants/colors.dart';
 import 'package:spotifyuiredesign/constants/demo_data.dart';
 
 class PublicAblumPlayList extends StatelessWidget {
@@ -53,7 +54,15 @@ class PublicAblumPlayList extends StatelessWidget {
             children: [
               Text(music.time),
               const SizedBox(width: 15.0),
-              const Icon(Icons.ac_unit),
+              Container(
+                height: 30.0,
+                width: 30.0,
+                decoration: BoxDecoration(
+                  color: dartModeColor.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                child: Image.asset('assets/icons/play.png'),
+              ),
             ],
           ),
         ],

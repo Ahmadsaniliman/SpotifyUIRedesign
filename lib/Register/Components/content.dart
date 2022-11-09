@@ -56,7 +56,11 @@ class Content extends StatelessWidget {
         const SizedBox(height: 20.0),
         DefaultButton(
           text: 'Create Account',
-          onPress: () {},
+          onPress: () {
+            Navigator.of(context).pushNamed(
+              signInViewRoute,
+            );
+          },
         ),
         Padding(
           padding: const EdgeInsets.symmetric(
@@ -87,7 +91,7 @@ class Content extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset('assets/images/Vector (2).png'),
+              Image.asset('assets/images/Group 26.png'),
               Image.asset('assets/images/Vector (2).png'),
             ],
           ),

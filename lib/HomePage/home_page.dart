@@ -82,11 +82,11 @@ class _HomePageViewState extends State<HomePageView> {
                   ),
                 ),
               ),
-              const SizedBox(height: 10.0),
+              //   const SizedBox(height: 10.0),
               Column(
                 children: [
                   const PlayListRow(),
-                  const SizedBox(height: 10.0),
+                  //   const SizedBox(height: 10.0),
                   SizedBox(
                     height: 100.0,
                     child: ListView.builder(

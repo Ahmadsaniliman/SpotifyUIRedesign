@@ -19,7 +19,7 @@ class AppBarRow extends StatelessWidget {
           width: 100.0,
         ),
         const Icon(
-          Icons.access_alarm,
+          Icons.menu,
           size: 30.0,
         ),
       ],

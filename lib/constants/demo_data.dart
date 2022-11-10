@@ -13,8 +13,8 @@ class PopularMusic {
 final List<PopularMusic> demoMusic = [
   PopularMusic(
     image: 'assets/images/taylorred.jpg',
-    songName: 'Lover',
-    artistName: 'Taylor Swift',
+    songName: 'Bay Guy',
+    artistName: 'Billie Ellish',
   ),
   PopularMusic(
     image: 'assets/images/taylorred.jpg',

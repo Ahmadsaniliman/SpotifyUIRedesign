@@ -10,7 +10,6 @@ class RegisteSignInView extends StatefulWidget {
 }
 
 class _RegisteSignInViewState extends State<RegisteSignInView> {
-  final index = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +33,7 @@ class _RegisteSignInViewState extends State<RegisteSignInView> {
                 children: [
                   const BuildAppBarIcon(),
                   const SizedBox(height: 70.0),
-                  SpotifyDesc(index: index)
+                  SpotifyDesc(),
                 ],
               ),
             ),

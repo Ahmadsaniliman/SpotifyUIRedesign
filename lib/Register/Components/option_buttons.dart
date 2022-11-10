@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:spotifyuiredesign/Register/Components/buttons.dart';
+import 'package:spotifyuiredesign/constants/colors.dart';
 import 'package:spotifyuiredesign/constants/routes.dart';
 
 class OptionButtons extends StatelessWidget {
   const OptionButtons({
     Key? key,
-    required this.index,
   }) : super(key: key);
-
-  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +20,8 @@ class OptionButtons extends StatelessWidget {
             );
           },
           text: 'Register',
-          index: index,
+          color: primaryColor,
+          textColor: Colors.white,
         ),
         RegistAndSignInBUttons(
           onPress: () {
@@ -31,7 +30,8 @@ class OptionButtons extends StatelessWidget {
             );
           },
           text: 'Sign in',
-          index: index,
+          color: null,
+          textColor: null,
         ),
       ],
     );

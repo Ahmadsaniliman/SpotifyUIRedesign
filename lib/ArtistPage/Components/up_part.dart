@@ -52,11 +52,12 @@ class UpPartArtist extends StatelessWidget {
                   icon: const Icon(
                     Icons.arrow_back_ios,
                     size: 15.0,
+                    color: Colors.white,
                   ),
                 ),
               ),
               const Icon(
-                Icons.ac_unit,
+                Icons.menu,
                 color: Colors.white,
               ),
             ],

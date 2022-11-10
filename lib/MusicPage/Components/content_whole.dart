@@ -71,10 +71,16 @@ class WholeContent extends StatelessWidget {
                           width: double.infinity,
                           color: dartModeColor,
                         ),
-                        Container(
-                          height: 3.0,
-                          width: 150.0,
-                          color: dartModeColor,
+                        Positioned(
+                          top: 0.3,
+                          child: Container(
+                            height: 10.0,
+                            width: 10.0,
+                            decoration: const BoxDecoration(
+                              color: dartModeColor,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
                         ),
                       ],
                     ),
@@ -84,7 +90,7 @@ class WholeContent extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
-                    Text('2:55'),
+                    Text('0:00'),
                     Text('5:00'),
                   ],
                 ),
@@ -118,23 +124,23 @@ class WholeContent extends StatelessWidget {
                   ],
                 ),
               ),
-              Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => LyricsPageView(music: music),
-                        ),
-                      );
-                    },
-                    child: Image.asset(
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => LyricsPageView(music: music),
+                    ),
+                  );
+                },
+                child: Column(
+                  children: [
+                    Image.asset(
                       'assets/icons/arrowup.png',
                     ),
-                  ),
-                  const SizedBox(height: 10.0),
-                  const Text('Lyrics'),
-                ],
+                    const SizedBox(height: 10.0),
+                    const Text('Lyrics'),
+                  ],
+                ),
               ),
             ],
           ),

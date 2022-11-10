@@ -69,22 +69,22 @@ class DownPart extends StatelessWidget {
                           width: double.infinity,
                           color: dartModeColor,
                         ),
-                        Container(
-                          height: 3.0,
-                          width: 150.0,
-                          color: dartModeColor,
-                        ),
-                        Positioned(
-                          top: 0,
-                          child: Container(
-                            height: 12.0,
-                            width: 13.0,
-                            decoration: const BoxDecoration(
-                              color: dartModeColor,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ),
+                        // Container(
+                        //   height: 3.0,
+                        //   width: 150.0,
+                        //   color: dartModeColor,
+                        // ),
+                        // Positioned(
+                        //   top: 0,
+                        //   child: Container(
+                        //     height: 12.0,
+                        //     width: 13.0,
+                        //     decoration: const BoxDecoration(
+                        //       color: dartModeColor,
+                        //       shape: BoxShape.circle,
+                        //     ),
+                        //   ),
+                        // ),
                       ],
                     ),
                   ],
@@ -93,7 +93,7 @@ class DownPart extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
-                    Text('2:55'),
+                    Text('0:00'),
                     Text('5:00'),
                   ],
                 ),

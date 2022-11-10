@@ -41,7 +41,7 @@ class BuildBar extends StatelessWidget {
             fontSize: 20.0,
           ),
         ),
-        const Icon(Icons.ac_unit),
+        const Icon(Icons.menu),
       ],
     );
   }

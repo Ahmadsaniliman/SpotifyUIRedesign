@@ -4,10 +4,7 @@ import 'package:spotifyuiredesign/Register/Components/option_buttons.dart';
 class SpotifyDesc extends StatelessWidget {
   const SpotifyDesc({
     Key? key,
-    required this.index,
   }) : super(key: key);
-
-  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +29,7 @@ class SpotifyDesc extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        OptionButtons(index: index),
+        OptionButtons(),
       ],
     );
   }
